@@ -26,16 +26,18 @@ button:hover { background-color:#388e3c; }
   <div style="margin-top:10px; font-size:0.9rem; cursor:pointer; color:#2e7d32;" onclick="goToSignup()">Don't have an account? Sign Up</div>
 </div>
 <script>
-const BACKEND_URL = "https://sustainhire-backend1-3new.onrender.com";
+const BACKEND_URL = "https://sustainhire-backend1-re4i.onrender.com";
+
 async function loginUser() {
   const email = document.getElementById("email").value;
   const password = document.getElementById("password").value;
   
   const res = await fetch(`${BACKEND_URL}/api/auth/login`, {
-    method:"POST",
-    headers: {"Content-Type":"application/json"},
-    body: JSON.stringify({email,password})
+    method: "POST",
+    headers: { "Content-Type": "application/json" },
+    body: JSON.stringify({ email, password })
   });
+
   const data = await res.json();
   
   if (res.ok) {
@@ -50,5 +52,4 @@ function goToSignup() {
   window.location.href = "signup.html";
 }
 </script>
-</body>
-</html>
+
