@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>SustainBot</title>
+  <link rel="stylesheet" href="chatbot.css">
+</head>
+<body>
+
+<!-- Floating Chat Button -->
+<div class="bot-launch" onclick="toggleChat()">
+  <img src="leafy avatar.png" alt="SustainBot">
+</div>
+
+<!-- Chat Box -->
+<div class="chat-box" id="chatBox">
+  <div class="chat-header">
+    SustainBot 
+    <span onclick="toggleChat()">✖</span>
+  </div>
+
+  <div class="chat-body" id="chatBody">
+    <div class="bot-msg">
+      Hi! I’m SustainBot 🌱<br>
+      Your friendly green guide!
+    </div>
+
+    <div class="options">
+      <button onclick="quickReply('account')">How do I create an account?</button>
+      <button onclick="quickReply('apply')">How do I apply for an internship?</button>
+      <button onclick="quickReply('events')">Where can I find events?</button>
+      <button onclick="quickReply('support')">I need help</button>
+    </div>
+  </div>
+
+  <div class="input-area">
+    <input type="text" id="userInput" placeholder="Type your question..." />
+    <button onclick="sendMessage()">➤</button>
+  </div>
+</div>
+
+<script src="chatbot.js"></script>
+</body>
+</html>
