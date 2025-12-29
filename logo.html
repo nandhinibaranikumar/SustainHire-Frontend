@@ -1,189 +1,48 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>SustainHire - Internship Finder</title>
-  <link rel="icon" href="logo.jpg">
-  <!-- Bootstrap CSS -->
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
-  <!-- Bootstrap Icons -->
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css" rel="stylesheet">
-  <style>
-   
-    .navbar-brand {
-      font-weight: bold;
-      color: #0caa41 !important;
-      font-size: 1.5rem;
-      padding-left: 10%;
-      cursor: pointer;
-    }
-    .nav-link {
-      font-weight: 500;
-      margin-right: 15px;
-    }
-
-    /* Hero Section */
-    .hero {
-      text-align: center;
-      padding: 120px 20px;
-      color: white;
-      position: relative;
-      background: url('sustainhire.jpg') no-repeat center center/cover; /* 🔹 Add your hero image here */
-      min-height: 100vh;
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-      align-items: center;
-    }
-    .hero::before {
-      content: "";
-      position: absolute;
-      top: 0; left: 0; right: 0; bottom: 0;
-      background: rgba(0,0,0,0.5); /* 🔹 Dark overlay for readability */
-      z-index: 1;
-    }
-    .hero img,
-    .hero h1,
-    .hero p {
-      position: relative;
-      z-index: 2; /* 🔹 Make text/logo visible above overlay */
-    }
-    .hero img {
-      max-width: 200px;
-      margin-bottom: 20px;
-    }
-    .hero h1 {
-      font-weight: bold;
-      font-size: 2.5rem;
-    }
-    .hero p {
-      font-size: 18px;
-      max-width: 700px;
-      margin: 20px auto;
-    }
-
-
-    .features {
-      padding: 50px 20px;
-      background-color: #fff;
-    }
-    .features img {
-      border-radius: 10px;
-    }
-    .footer {
-      background-color: white;
-      color: black;
-      padding: 40px 20px;
-    }
-    .footer a {
-      color: #0caa41;
-      text-decoration: none;
-    }
-    .footer a:hover {
-      text-decoration: underline;
-    }
-    .social-icons i {
-      font-size: 1.5rem;
-      margin-right: 15px;
-      color: #0caa41;
-    }
-  </style>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>User Login | SustainHire</title>
+<link rel="icon" href="logo.jpg">
+<style>
+body {margin:0; background-color:#c8e6c9; font-family:Georgia, 'Times New Roman', Times, serif; display:flex; justify-content:center; align-items:center; height:100vh;}
+h2{color:#2e7d32; margin-bottom:8px;}
+.card {background:white; padding:40px 50px; border-radius:20px; box-shadow:0 10px 25px #2e7d32; width:350px; text-align:center;}
+input {width:100%; padding:12px; margin:10px 0; border-radius:8px; border:1px solid #aaa; outline:none;}
+button {width:100%; padding:12px; background-color:#2e7d32; border:none; border-radius:30px; color:white; font-size:1rem; cursor:pointer; transition:0.3s;}
+button:hover {background-color:#388e3c;}
+</style>
 </head>
 <body>
- 
-  <!-- Navbar -->
-  <nav class="navbar navbar-expand-lg bg-white shadow-sm ">
-    <div class="container-fluid">
-      <a class="navbar-brand" href="logo.html">SUSTAINHIRE</a>
-      <img src="logo.jpg" width="50px" alt="logo">
+<div class="card">
+  <h2>User Login</h2>
+  <input type="email" id="email" placeholder="Email" />
+  <input type="password" id="password" placeholder="Password" />
+  <button onclick="loginUser()">Login</button>
+  <div style="margin-top:10px; font-size:0.9rem; cursor:pointer; color:#2e7d32;" onclick="goToSignup()">Don't have an account? Sign Up</div>
+</div>
+<script>
+const BACKEND_URL = "https://sustainhire-backend1-re4i.onrender.com";
 
+async function loginUser() {
+  const email = document.getElementById("email").value.trim();
+  const password = document.getElementById("password").value.trim();
+  if(!email || !password){ alert("Please enter email and password"); return; }
 
-      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
-        <span class="navbar-toggler-icon"></span>
-      </button>
+  try {
+    const res = await fetch(`${BACKEND_URL}/api/auth/login`, {
+      method:"POST",
+      headers:{"Content-Type":"application/json"},
+      body:JSON.stringify({email,password})
+    });
+    const data = await res.json();
+    alert(data.message);
+    if(res.ok){ window.location.href = "logo.html"; }
+  } catch(err) { alert("Backend not running. Please start the server."); }
+}
 
-
-      <div class="collapse navbar-collapse" id="navbarNav">
-        <ul class="navbar-nav me-auto">
-          <li class="nav-item"><a class="nav-link" href="home.html">HOME</a></li>
-          <li class="nav-item"><a class="nav-link" href="about.html">ABOUT</a></li>
-          <li class="nav-item"><a class="nav-link" href="internship.html">INTERNSHIPS</a></li>
-          <li class="nav-item"><a class="nav-link" href="event.html">EVENTS</a></li>
-          <li class="nav-item"><a class="nav-link" href="collaboration.html">GREEN COLLABORATORS</a></li>
-          <li class="nav-item"><a class="nav-link" href="support.html">SUPPORT</a></li>
-        </ul>
-      </div>
-    </div>
-  </nav>
-
-
-  <!-- Hero Section -->
-  <section id="hero" class="hero">
-   
-    <h1>Welcome to SustainHire </h1>
-    <p>
-      SustainHire connects students with meaningful internships focused on sustainability,
-      green initiatives, and social impact. Explore opportunities, collaborate with eco-friendly
-      organizations, and start building a greener future today.
-    </p>
-  </section>
-
-
-  <!-- Features / Content Section -->
-<section id="about" class="features container text-center">
-  <div class="row g-4">
-    <div class="col-md-4">
-      <img src="student.jpg" class="feature-img img-fluid" alt="Students">
-      <h4 class="mt-3">Empowering Students</h4>
-      <p>Find internships tailored to your skills and passion for sustainability.</p>
-    </div>
-    <div class="col-md-4">
-      <img src="environment.jpg" class="feature-img img-fluid" alt="Environment">
-      <h4 class="mt-3">Green Internships</h4>
-      <p>Work with organizations dedicated to environmental and social good.</p>
-    </div>
-    <div class="col-md-4">
-      <img src="collab.jpg" class="feature-img img-fluid" alt="Collaboration">
-      <h4 class="mt-3">Collaborative Growth</h4>
-      <p>Network and grow alongside eco-conscious collaborators worldwide.</p>
-    </div>
-  </div>
-</section>
-
-
-<!-- Add this CSS -->
-<style>
-  .feature-img {
-    width: 100%;      /* responsive full width inside column */
-    max-width: 350px; /* all images same max width */
-    height: 200px;    /* fixed height for equal alignment */
-    object-fit: cover; /* crops excess but keeps ratio */
-    margin: 0 auto;   /* centers the image */
-    display: block;
-  }
-</style>
-
-
-
-
-  <!-- Footer -->
-  <footer class="footer text-center">
-    <div class="container">
-      <p><strong>Contact Us:</strong> sustainhire@gmail.com | +91 6663338880</p>
-      <p>Address: Green Valley Towers, Adyar, Chennai, India</p>
-      <div class="social-icons my-3">
-         <a href="https://www.facebook.com/groups/731957298564333/posts/1192668582493200/"><i class="bi bi-facebook"></i></a>
-        <a href="https://x.com/3RBuilding/status/1499761981540163591"><i class="bi bi-twitter"></i></a>
-        <a href="https://www.instagram.com/sustainhire?igsh=MmYzeGJianNuNHY2"><i class="bi bi-instagram"></i></a>
-        <a href="https://www.linkedin.com/jobs/view/sustainability-intern-at-treeandhumanknot-4309119665/?originalSubdomain=in"><i class="bi bi-linkedin"></i></a>
-      </div>
-      <p>&copy; 2025 SustainHire. All Rights Reserved.</p>
-    </div>
-  </footer>
-
-
-  <!-- Bootstrap JS -->
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+function goToSignup(){ window.location.href = "signup.html"; }
+</script>
 </body>
 </html>
