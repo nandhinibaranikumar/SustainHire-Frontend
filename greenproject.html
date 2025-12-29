@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Share Your Green Project Ideas</title>
+  <link rel="icon" href="logo.jpg">
+  <!-- Bootstrap CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+  <!-- Bootstrap Icons -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css" rel="stylesheet">
+  <style>
+    body{
+        font-family: sans-serif;
+    }
+    .hero {
+      background: url("commforum.jpg") center center / cover no-repeat;
+      color: black;
+      padding: 100px 20px;
+      text-align: center;
+    }
+    .hero h1 {
+      font-size: 3rem;
+      font-weight: bold;
+    }
+    .hero p {
+      font-size: 1.2rem;
+      margin-top: 15px;
+    }
+    .section-title {
+      margin: 40px 0 20px;
+      font-weight: bold;
+      color: #0d943a;
+    }
+    .category-badge {
+      background-color: #0d943a;
+      color: white;
+      border-radius: 20px;
+      padding: 5px 15px;
+      margin: 5px;
+      display: inline-block;
+    }
+    .form-section {
+      background: #f9f9f9;
+      padding: 40px;
+      border-radius: 12px;
+    }
+    .idea-card {
+      border-left: 5px solid #0d943a;
+      padding: 15px;
+      margin-bottom: 20px;
+      background: white;
+      border-radius: 8px;
+      box-shadow: 0 3px 6px rgba(0,0,0,0.1);
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Hero Section -->
+  <section class="hero">
+    <h1> Share Your Green Project Ideas</h1>
+    <p>Empower your campus and community with eco-friendly innovations.</p>
+  </section>
+
+  <div class="container my-5">
+
+    <!-- Intro -->
+    <section>
+      <h2 class="section-title">Introduction</h2>
+      <p>
+        Welcome to the hub for student-powered environmental innovation! 
+        Here, everyone can present creative solutions and practical projects 
+        that help build a greener campus and community. Whether you’re starting 
+        a composting program, designing an eco-friendly app, or running a clean-up 
+        campaign, your idea matters.
+      </p>
+    </section>
+
+    <!-- How to Share -->
+    <section>
+      <h2 class="section-title">How to Share</h2>
+      <ul>
+        <li><strong>Submit Your Project:</strong> Fill out our form with a title, description, goals, and steps. Attach images, diagrams, or presentations if possible.</li>
+        <li><strong>Idea Categories:</strong> Themes include waste management, green tech, biodiversity, renewable energy, eco-art, sustainable food, water conservation, and more.</li>
+        <li><strong>Collaboration:</strong> Projects involving teamwork, campus groups, or community partners may receive special visibility or support.</li>
+      </ul>
+    </section>
+
+    <!-- Idea Categories -->
+    <section>
+      <h2 class="section-title">Idea Categories</h2>
+      <div>
+        <span class="category-badge">Waste Management</span>
+        <span class="category-badge">Green Tech</span>
+        <span class="category-badge">Biodiversity</span>
+        <span class="category-badge">Renewable Energy</span>
+        <span class="category-badge">Eco-Art</span>
+        <span class="category-badge">Sustainable Food</span>
+        <span class="category-badge">Water Conservation</span>
+        <span class="category-badge">Climate Action</span>
+      </div>
+    </section>
+
+    <!-- Inspiration -->
+    <section>
+      <h2 class="section-title">Inspiration – Project Ideas</h2>
+      <div class="idea-card"> Campus garden for veggies and pollinator habitats.</div>
+      <div class="idea-card"> Tree-planting campaigns or vertical gardens.</div>
+      <div class="idea-card"> Eco-friendly art contests using recycled materials.</div>
+      <div class="idea-card"> Energy-saving initiatives: LEDs, solar panels, unplug competitions.</div>
+      <div class="idea-card"> Recycling drives with creative educational outreach.</div>
+      <div class="idea-card"> Community clean-up and waterway restoration days.</div>
+      <div class="idea-card"> Biodiversity mapping projects, insect hotels, nature walks.</div>
+      <div class="idea-card"> Apps to track carbon footprints or promote green habits.</div>
+      <div class="idea-card"> Green transport advocacy – bike buses, public transit drives.</div>
+    </section>
+
+    <!-- What Happens Next -->
+    <section>
+      <h2 class="section-title">What Happens Next?</h2>
+      <p>
+        Shared projects are featured on the site for feedback, collaboration, and recognition. 
+        Standout proposals may receive campus or sponsor funding, mentoring, or a showcase opportunity.  
+        Every idea—poster, club, event, startup, or campaign—brings us closer to a sustainable future.
+      </p>
+    </section>
+
+    <!-- Submission Form -->
+<section class="form-section my-5 container">
+  <h2 class="section-title">Submit Your Project</h2>
+
+  <!-- Success Alert (hidden by default) -->
+  <div id="projectAlert" class="alert alert-success alert-dismissible fade show d-none" role="alert">
+     Submitted Successfully!
+    <button type="button" class="btn-close" data-bs-dismiss="alert"></button>
+  </div>
+
+  <form id="projectForm">
+    <div class="mb-3">
+      <label class="form-label">Project Title</label>
+      <input type="text" class="form-control" placeholder="Enter project title" required>
+    </div>
+    <div class="mb-3">
+      <label class="form-label">Description</label>
+      <textarea class="form-control" rows="4" placeholder="Describe your project..." required></textarea>
+    </div>
+    <div class="mb-3">
+      <label class="form-label">Goals</label>
+      <input type="text" class="form-control" placeholder="State your project goals" required>
+    </div>
+    <div class="mb-3">
+      <label class="form-label">Upload Files</label>
+      <input type="file" class="form-control">
+    </div>
+    <button type="submit" class="btn btn-success w-100">Submit Project</button>
+  </form>
+</section>
+
+<script>
+  document.getElementById("projectForm").addEventListener("submit", function(event) {
+    event.preventDefault(); // prevent page reload
+
+    // Show alert
+    const alertBox = document.getElementById("projectAlert");
+    alertBox.classList.remove("d-none");
+
+    // Auto-hide after 3 seconds
+    setTimeout(() => {
+      alertBox.classList.add("d-none");
+    }, 3000);
+  });
+</script>
+
+
+  </div>
+  <footer class="footer text-center bg-light py-4 mt-5">
+    <p>&copy; 2025 SustainHire. All Rights Reserved.</p>
+  </footer>
+
+  <!-- Bootstrap JS -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

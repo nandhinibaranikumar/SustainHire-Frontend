@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Welcome | SustainHire</title>
+  <link rel="icon" href="logo.jpg">
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      background-color: #c8e6c9; /* pastel green */
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      font-family: "Poppins", sans-serif;
+      overflow: hidden;
+    }
+
+    .container {
+      text-align: center;
+      animation: fadeIn 2s ease-in;
+    }
+
+    .logo {
+      width: 220px;
+      height: 220px;
+      border-radius: 50%;
+      object-fit: cover;
+      box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
+      transition: transform 0.5s ease, box-shadow 0.5s ease;
+      animation: float 3s ease-in-out infinite;
+    }
+
+    .logo:hover {
+      transform: scale(1.05);
+      box-shadow: 0 15px 35px rgba(0, 0, 0, 0.25);
+    }
+
+    .welcome-text {
+      font-size: 1.8rem;
+      color: #2e7d32;
+      margin-top: 25px;
+      letter-spacing: 1px;
+      font-weight: 600;
+      animation: slideDown 1.5s ease;
+    }
+
+    .btn {
+      margin-top: 40px;
+      background-color: #4caf50;
+      color: white;
+      padding: 15px 40px;
+      border: none;
+      border-radius: 50px;
+      font-size: 1.1rem;
+      cursor: pointer;
+      transition: all 0.4s ease;
+      box-shadow: 0 6px 15px rgba(76, 175, 80, 0.3);
+    }
+
+    .btn:hover {
+      background-color: #388e3c;
+      transform: translateY(-4px);
+      box-shadow: 0 8px 20px rgba(76, 175, 80, 0.4);
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(-20px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    @keyframes slideDown {
+      from { opacity: 0; transform: translateY(-40px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    @keyframes float {
+      0%, 100% { transform: translateY(0); }
+      50% { transform: translateY(-10px); }
+    }
+  </style>
+</head>
+<body>
+ <div class="container"> <!-- Replace logo.jpg with your actual logo file --> 
+    <img src="logo.jpg" alt="SustainHire Logo" class="logo" /> 
+    <div class="welcome-text">Welcome to SustainHire</div>
+  
+  <!-- Get Started Button -->
+  <a href="signup.html" class="btn btn-success btn-lg px-5 text-white" style="text-decoration: none; display: inline-block;">
+    Get Started
+  </a>
+</div>
+
+
+  <script>
+    function goToHome() {
+      window.location.href = "logo.html";
+    }
+  </script>
+</body>
+</html>

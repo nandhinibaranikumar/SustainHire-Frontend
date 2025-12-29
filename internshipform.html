@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="icon" href="logo.jpg">
+  <title>Internship Application Form</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+  <style>
+    body { background-color: #e6f4ea; }
+    .card { border-radius: 15px; background: #ffffff; }
+    h2 { color: #2e7d32; }
+    h5 { color: #388e3c; }
+    .btn-success { background-color: #2e7d32; border: none; }
+    .btn-success:hover { background-color: #256428; }
+  </style>
+</head>
+<body>
+
+<div class="container my-5">
+  <div class="card shadow p-4">
+    <h2 class="text-center mb-4">Internship Application Form</h2>
+
+    <form id="internshipForm" enctype="multipart/form-data">
+      <!-- Personal Information -->
+      <h5>Personal Information</h5>
+      <div class="row g-3">
+        <div class="col-md-6">
+          <label class="form-label">Full Name</label>
+          <input type="text" name="fullName" class="form-control" required>
+        </div>
+        <div class="col-md-6">
+          <label class="form-label">Email Address</label>
+          <input type="email" name="email" class="form-control" required>
+        </div>
+        <div class="col-md-6">
+          <label class="form-label">Phone Number</label>
+          <input type="tel" name="phone" class="form-control" required>
+        </div>
+        <div class="col-md-6">
+          <label class="form-label">Date of Birth</label>
+          <input type="date" name="dob" class="form-control" required>
+        </div>
+        <div class="col-12">
+          <label class="form-label">Current Location</label>
+          <input type="text" name="location" class="form-control" required>
+        </div>
+      </div>
+
+      <!-- Academic Details -->
+      <h5 class="mt-4">Academic Details</h5>
+      <div class="row g-3">
+        <div class="col-md-6">
+          <label class="form-label">College Name</label>
+          <input type="text" name="college" class="form-control" required>
+        </div>
+        <div class="col-md-6">
+          <label class="form-label">Degree Program</label>
+          <select name="degree" class="form-select" required>
+            <option value="" disabled selected>Select Degree</option>
+            <option>B.Sc.</option>
+            <option>B.C.A</option>
+            <option>BBA</option>
+            <option>BFA</option>
+            <option>B.Arch</option>
+            <option>B.A</option>
+            <option>B.Tech</option>
+            <option>M.Tech</option>
+            <option>M.Sc.</option>
+            <option>M.C.A</option>
+          </select>
+        </div>
+        <div class="col-md-6">
+          <label class="form-label">Major</label>
+          <input type="text" name="major" class="form-control" required>
+        </div>
+        <div class="col-md-6">
+          <label class="form-label">Year of Study</label>
+          <select name="year" class="form-select" required>
+            <option value="" disabled selected>Select Year</option>
+            <option>1</option>
+            <option>2</option>
+            <option>3</option>
+            <option>4</option>
+            <option>5</option>
+          </select>
+        </div>
+        <div class="col-md-6">
+          <label class="form-label">Graduation Year</label>
+          <input type="number" name="graduationYear" class="form-control" min="2020" max="2035" required>
+        </div>
+      </div>
+
+      <!-- Internship Details -->
+      <h5 class="mt-4">Internship Details</h5>
+      <div class="row g-3">
+        <div class="col-md-6">
+          <label class="form-label">Internship Role</label>
+          <select name="role" class="form-select" required>
+            <option value="" disabled selected>Select Internship Role</option>
+            <option>Green Energy Analyst</option>
+            <option>Sustainability Research Intern</option>
+            <option>Environmental Policy Intern</option>
+          </select>
+        </div>
+        <div class="col-md-6">
+          <label class="form-label">Preferred Start Date (Month/Year)</label>
+          <input type="month" name="startMonthYear" class="form-control" required>
+        </div>
+        <div class="col-md-6">
+          <label class="form-label">Duration Availability</label>
+          <select name="duration" class="form-select" required>
+            <option value="" disabled selected>Select Duration</option>
+            <option>1 month</option>
+            <option>3 months</option>
+            <option>6 months</option>
+          </select>
+        </div>
+        <div class="col-md-6">
+          <label class="form-label">Location Preference</label>
+          <select name="locationPref" class="form-select" required>
+            <option value="" disabled selected>Select</option>
+            <option>Remote</option>
+            <option>On-site</option>
+            <option>Hybrid</option>
+          </select>
+        </div>
+      </div>
+
+      <!-- Skills & Experience -->
+      <h5 class="mt-4">Skills & Experience (Optional)</h5>
+      <textarea name="skills" class="form-control mb-2" placeholder="Relevant coursework"></textarea>
+      <textarea name="experience" class="form-control mb-2" placeholder="Previous experience"></textarea>
+
+      <!-- Resume -->
+      <div class="mb-3">
+        <label class="form-label">Upload Resume / CV</label>
+        <input type="file" name="resume" required>
+      </div>
+
+      <!-- Motivation & Goals -->
+      <h5 class="mt-4">Motivation & Goals (Optional)</h5>
+      <textarea name="whyInternship" class="form-control mb-2" placeholder="Why are you interested?"></textarea>
+      <textarea name="careerGoals" class="form-control mb-2" placeholder="Career goals"></textarea>
+      <textarea name="areasOfInterest" class="form-control mb-2" placeholder="Areas of interest"></textarea>
+
+      <!-- Additional Info -->
+      <h5 class="mt-4">Additional Information (Optional)</h5>
+      <input type="url" name="linkedin" class="form-control mb-2" placeholder="LinkedIn Profile">
+      <input type="url" name="portfolio" class="form-control mb-2" placeholder="Portfolio">
+      <textarea name="comments" class="form-control mb-2" placeholder="Additional comments"></textarea>
+
+      <!-- Declaration -->
+      <div class="form-check mb-4">
+        <input class="form-check-input" type="checkbox" name="declaration" id="declaration" required>
+        <label class="form-check-label" for="declaration">I confirm information is accurate.</label>
+      </div>
+
+      <!-- Submit -->
+      <div class="text-center">
+        <button type="submit" class="btn btn-success px-4">Submit Application</button>
+      </div>
+    </form>
+  </div>
+</div>
+
+<script>
+const BACKEND_URL = "https://sustainhire-backend1-3new.onrender.com";
+
+document.getElementById("internshipForm").addEventListener("submit", async (e) => {
+  e.preventDefault();
+  const form = e.target;
+  const formData = new FormData(form);
+  formData.set('declaration', form.declaration.checked ? "true" : "false");
+
+  try {
+    const res = await fetch(`${BACKEND_URL}/api/internship/apply`, { method: "POST", body: formData });
+    const result = await res.json();
+
+    if(res.ok){
+      alert(result.message || "Application submitted successfully!\nKindly refer your email for further updates.");
+      form.reset();
+      // Redirect after submission
+      window.location.href = "home.html"; // optional, you can create this page
+    } else {
+      alert(result.error || "Error submitting form");
+    }
+  } catch (err) {
+    alert("Error: " + err.message);
+  }
+});
+</script>
+
+</body>
+</html>

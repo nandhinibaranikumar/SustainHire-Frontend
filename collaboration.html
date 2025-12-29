@@ -1,0 +1,347 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>SustainHire – Green Collaborators</title>
+   <link rel="icon" href="logo.jpg">
+  <!-- Bootstrap CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+  <!-- Bootstrap Icons -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css" rel="stylesheet">
+  <!-- FontAwesome -->
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" rel="stylesheet">
+
+
+  <style>
+   
+    .navbar-brand {
+      font-weight: bold;
+      color: #0caa41 !important;
+      font-size: 1.5rem;
+      padding-left: 10%;
+    }
+    .nav-link {
+      font-weight: 500;
+      margin-right: 15px;
+    }
+    .logo-gallery img {
+      width: 100%;
+      max-height: 100px;
+      object-fit: contain;
+      filter: grayscale(100%);
+      transition: 0.3s ease-in-out;
+      cursor: pointer;
+    }
+    .logo-gallery img:hover {
+      filter: grayscale(0);
+      transform: scale(1.05);
+    }
+    .impact-card {
+      border-left: 5px solid #0caa41;
+      transition: 0.3s;
+    }
+    .impact-card:hover { background: #f9f9f9; }
+    .spotlight {
+      background: #e9f9f0;
+      border-radius: 10px;
+    }
+    .cta-section {
+      background: #136d31;
+      color: white;
+      padding: 50px 20px;
+      border-radius: 10px;
+    }
+    .footer {
+      background-color: white;
+      color: black;
+      padding: 40px 20px;
+    }
+    .footer a {
+      color: #0caa41;
+      text-decoration: none;
+    }
+    .footer a:hover {
+      text-decoration: underline;
+    }
+    .social-icons i {
+      font-size: 1.5rem;
+      margin-right: 15px;
+      color: #0caa41;
+    }
+   
+  </style>
+</head>
+<body>
+    <!-- Navbar -->
+  <nav class="navbar navbar-expand-lg bg-white shadow-sm ">
+    <div class="container-fluid">
+      <a class="navbar-brand" href="logo.html">SUSTAINHIRE</a>
+      <img src="logo.jpg" width="50px" alt="logo">
+
+
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav me-auto">
+          <li class="nav-item"><a class="nav-link" href="home.html">HOME</a></li>
+          <li class="nav-item"><a class="nav-link " href="about.html">ABOUT</a></li>
+          <li class="nav-item"><a class="nav-link" href="internship.html">INTERNSHIPS</a></li>
+          <li class="nav-item"><a class="nav-link" href="event.html">EVENTS</a></li>
+          <li class="nav-item"><a class="nav-link active text-success" href="collaboration.html">GREEN COLLABORATORS</a></li>
+          <li class="nav-item"><a class="nav-link" href="support.html">SUPPORT</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Hero -->
+  <section class="text-center bg-success text-white py-5">
+    <h1> Our Green Collaborators</h1>
+    <h6><p>Building a sustainable future through partnerships</p></h6>
+  </section>
+
+  <!-- Partner Logos Showcase -->
+  <section class="container my-5">
+    <h2 class="text-center mb-4">Our Partners</h2>
+    <div class="row g-4 logo-gallery text-center">
+      <div class="col-6 col-md-3">
+        <a href="#" data-bs-toggle="modal" data-bs-target="#partner1"><img src="partner1.jpg"></a>
+      </div>
+      <div class="col-6 col-md-3">
+        <a href="#" data-bs-toggle="modal" data-bs-target="#partner2"><img src="partner2.jpg"></a>
+      </div>
+      <div class="col-6 col-md-3">
+        <a href="#" data-bs-toggle="modal" data-bs-target="#partner3"><img src="partner3.jpg"></a>
+      </div>
+      <div class="col-6 col-md-3">
+        <a href="#" data-bs-toggle="modal" data-bs-target="#partner4"><img src="partner4.jpg"></a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Partner Modal Example -->
+  <div class="modal fade" id="partner1" tabindex="-1">
+    <div class="modal-dialog modal-dialog-centered">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title">Vital.Earth</h5>
+          <button class="btn-close" data-bs-dismiss="modal"></button>
+        </div>
+        <div class="modal-body">
+          <p>Vital Earth is a sustainability platform sharing news and insights on eco-living, green energy, and conscious consumption.</p>
+          <a href="https://vital-earth.in/" class="btn btn-success">Visit Website</a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+  <!-- Partner Modal Example -->
+  <div class="modal fade" id="partner2" tabindex="-1">
+    <div class="modal-dialog modal-dialog-centered">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title">Treehugger</h5>
+          <button class="btn-close" data-bs-dismiss="modal"></button>
+        </div>
+        <div class="modal-body">
+          <p>Treehugger is a leading sustainability website providing news, advice, and solutions for green living and environmental awareness.</p>
+          <a href="https://www.treehugger.com/" class="btn btn-success">Visit Website</a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+  <!-- Partner Modal Example -->
+  <div class="modal fade" id="partner3" tabindex="-1">
+    <div class="modal-dialog modal-dialog-centered">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title">International Institute of Sustainable Development</h5>
+          <button class="btn-close" data-bs-dismiss="modal"></button>
+        </div>
+        <div class="modal-body">
+          <p>IISD is an award-winning independent think tank dedicated to creating “a world where people and the planet thrive” by advancing policy, research, and collaboration across climate, resources, and economies.</p>
+          <a href="https://www.iisd.org/" class="btn btn-success">Visit Website</a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+  <!-- Partner Modal Example -->
+  <div class="modal fade" id="partner4" tabindex="-1">
+    <div class="modal-dialog modal-dialog-centered">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title">Amazon Sustainability</h5>
+          <button class="btn-close" data-bs-dismiss="modal"></button>
+        </div>
+        <div class="modal-body">
+          <p>Amazon’s sustainability site highlights its goal to reach net-zero carbon by 2040 while advancing renewable energy, circular packaging, and social responsibility initiatives.</p>
+          <a href="https://sustainability.aboutamazon.com/" class="btn btn-success">Visit Website</a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+  <!-- Collaboration Impact Highlights -->
+  <section class="container my-5">
+    <h2 class="text-center mb-4">Impact Highlights</h2>
+    <div class="row g-4">
+      <div class="col-md-4">
+        <div class="card impact-card p-3 shadow-sm">
+          <i class="fa-solid fa-leaf fa-2x text-success mb-2"></i>
+          <h5>200+ Internships Delivered</h5>
+          <p>Our partners have hosted green interns worldwide.</p>
+        </div>
+      </div>
+      <div class="col-md-4">
+        <div class="card impact-card p-3 shadow-sm">
+          <i class="fa-solid fa-globe fa-2x text-success mb-2"></i>
+          <h5>10 Countries Reached</h5>
+          <p>Collaborations spread across Asia, Europe & US.</p>
+        </div>
+      </div>
+      <div class="col-md-4">
+        <div class="card impact-card p-3 shadow-sm">
+          <i class="fa-solid fa-recycle fa-2x text-success mb-2"></i>
+          <h5>150 Tons CO₂ Saved</h5>
+          <p>Collaborative projects delivered measurable impact.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- Featured Collaborator Spotlight -->
+  <section class="container my-5 spotlight p-4">
+  <div class="row align-items-center">
+    <!-- Image on the left, smaller -->
+    <div class="col-md-4 text-center text-md-start">
+      <img src="ceo.jpg" class="rounded-circle shadow img-fluid w-50" alt="Collaborator">
+    </div>
+    <!-- Text on the right -->
+    <div class="col-md-8">
+      <h3>GreenTech Solutions</h3>
+      <p>“Partnering with SustainHire helped us accelerate sustainable innovation and bring fresh talent into our projects.”</p>
+      <p><strong>– CEO, GreenTech Solutions</strong></p>
+    </div>
+  </div>
+</section>
+
+
+
+
+  <!-- Collaboration Types & Opportunities -->
+  <section class="container my-5">
+    <h2 class="text-center mb-4">Ways to Collaborate</h2>
+    <div class="accordion" id="collaborationAccordion">
+      <div class="accordion-item">
+        <h2 class="accordion-header"><button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#internships">Internship Hosting</button></h2>
+        <div id="internships" class="accordion-collapse collapse " data-bs-parent="#collaborationAccordion">
+          <div class="accordion-body">Host interns to work on real sustainability projects in your organization.</div>
+        </div>
+      </div>
+      <div class="accordion-item">
+        <h2 class="accordion-header"><button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#mentorship">Mentorship</button></h2>
+        <div id="mentorship" class="accordion-collapse collapse" data-bs-parent="#collaborationAccordion">
+          <div class="accordion-body">Guide young eco-leaders by sharing your expertise in sustainability fields.</div>
+        </div>
+      </div>
+      <div class="accordion-item">
+        <h2 class="accordion-header"><button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#events">Events & Research</button></h2>
+        <div id="events" class="accordion-collapse collapse" data-bs-parent="#collaborationAccordion">
+          <div class="accordion-body">Collaborate on events, workshops, or sustainability-focused research projects.</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+  <section class="cta-section text-center my-5">
+  <h2>Join Our Mission </h2>
+  <p>Become a partner and co-create impact with SustainHire.</p>
+
+
+  <!-- Bootstrap Alert (hidden initially) -->
+  <div id="pendingAlert" class="alert alert-warning alert-dismissible fade show d-none" role="alert">
+    ⚠️ Request Pending...
+    <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+  </div>
+
+
+  <form class="row g-3 justify-content-center mt-3" id="partnerForm">
+    <div class="col-md-4">
+      <input type="text" class="form-control" placeholder="Organization Name" required>
+    </div>
+    <div class="col-md-4">
+      <input type="email" class="form-control" placeholder="Contact Email" required>
+    </div>
+    <div class="col-md-8">
+      <textarea class="form-control" rows="3" placeholder="Message / Collaboration Interest" required></textarea>
+    </div>
+    <div class="col-12">
+      <button type="submit" class="btn btn-light">Request Partnership</button>
+    </div>
+  </form>
+</section>
+
+
+<script>
+  document.getElementById("partnerForm").addEventListener("submit", function(event) {
+    event.preventDefault(); // Stop page reload
+
+
+    // Show the alert
+    const alertBox = document.getElementById("pendingAlert");
+    alertBox.classList.remove("d-none");
+
+
+    // Auto-hide after 3 seconds
+    setTimeout(() => {
+      alertBox.classList.add("d-none");
+    }, 3000);
+  });
+</script>
+
+
+
+
+  <!-- Video / Interactive Map -->
+  <section class="container my-5 text-center">
+    <h2 class="mb-4">Our Global Collaborations</h2>
+    <iframe src="https://vital-earth.in/" width="100%" height="300" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+  </section>
+
+
+  <!-- Footer -->
+  <footer class="footer text-center">
+    <div class="container">
+      <p><strong>Contact Us:</strong> sustainhire@gmail.com | +91 6663338880</p>
+      <p>Address: Green Valley Towers, Adyar, Chennai, India</p>
+      <div class="social-icons my-3">
+         <a href="https://www.facebook.com/groups/731957298564333/posts/1192668582493200/"><i class="bi bi-facebook"></i></a>
+        <a href="https://x.com/3RBuilding/status/1499761981540163591"><i class="bi bi-twitter"></i></a>
+        <a href="https://www.instagram.com/sustainhire?igsh=MmYzeGJianNuNHY2"><i class="bi bi-instagram"></i></a>
+        <a href="https://www.linkedin.com/jobs/view/sustainability-intern-at-treeandhumanknot-4309119665/?originalSubdomain=in"><i class="bi bi-linkedin"></i></a>
+      </div>
+      <p>&copy; 2025 SustainHire. All Rights Reserved.</p>
+    </div>
+  </footer>
+
+
+
+
+  <!-- Bootstrap JS -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+
+
+</body>
+</html>
