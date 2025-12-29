@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Feedback | SustainHire</title>
+<link rel="icon" href="logo.jpg">
+
+<!-- Bootstrap 5 -->
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+
+<style>
+body{
+  background:linear-gradient(to bottom right,#e8f5e9,#c8e6c9);
+  
+}
+
+/* Fade animation */
+@keyframes fadeUp{
+  from{opacity:0;transform:translateY(25px)}
+  to{opacity:1;transform:translateY(0)}
+}
+
+.feedback-card{
+  background:#fff;
+  border-radius:20px;
+  box-shadow:0 20px 45px rgba(0,0,0,.18);
+  padding:35px;
+  animation:fadeUp .8s ease;
+}
+
+h2{
+  color:#2e7d32;
+}
+
+.sub-text{
+  color:#555;
+  font-size:.95rem;
+}
+
+iframe{
+  border-radius:12px;
+  border:none;
+}
+</style>
+</head>
+
+<body>
+
+<div class="container py-5">
+  <div class="row justify-content-center">
+    <div class="col-lg-9 col-md-11">
+
+      <div class="feedback-card text-center">
+
+        <!-- Success Message -->
+        <h2 class="fw-bold mb-2">Application Submitted Successfully!</h2>
+        <p class="sub-text mb-4">
+          Thank you for applying to the Green Intern Program  
+          Your journey toward a sustainable career has begun 
+        </p>
+
+        <!-- Divider -->
+        <div class="mx-auto mb-4" style="width:70px;height:4px;background:#4caf50;border-radius:5px;"></div>
+
+        <!-- Feedback Intro -->
+        <h5 class="fw-semibold mb-2">Help Us Improve</h5>
+        <p class="sub-text mb-4">
+          We’d love to hear your feedback about the application experience.  
+          It will take less than 2 minutes.
+        </p>
+
+        <!-- Google Form Embed -->
+        <!-- 🔴 Replace the src URL with YOUR Google Form embed link -->
+        <div class="ratio ratio-4x3">
+          <iframe 
+            src="https://docs.google.com/forms/d/e/1FAIpQLSfioPq3ZRx2zeKPJU54Ir9-ceOWpoUqli2mFN_NX7a3zZj43Q/viewform?usp=publish-editor"
+            loading="lazy">
+          </iframe>
+        </div>
+
+        <!-- Footer Note -->
+        <p class="mt-4 small text-muted">
+          Your feedback helps SustainHire grow greener 
+        </p>
+
+        <!-- Back to Home -->
+        <a href="logo.html" class="btn btn-success mt-3 px-4">
+          Back to Home
+        </a>
+
+      </div>
+
+    </div>
+  </div>
+</div>
+
+</body>
+</html>
